@@ -5,7 +5,6 @@ import NewChallengeForm from '../component/NewChallengeForm'
 
 class challengeContainer extends Component{
 
-
   render(){
     console.log('challengeContainer props', this.props)
     return(
@@ -16,8 +15,6 @@ class challengeContainer extends Component{
       {this.props.challenges.map(challenge=>{
       return <Challenge key={uuid()} challenge={challenge}/>
       })}
-
-      <NewChallengeForm/>
 
       </div>
     )
