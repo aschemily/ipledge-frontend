@@ -1,10 +1,13 @@
 import React, {Component} from 'react'
 import Challenge from '../component/challenge'
 import uuid from 'uuid'
+import NewChallengeForm from '../component/NewChallengeForm'
+import { Button, Header, Image, Modal } from 'semantic-ui-react'
+
 
 class challengeContainer extends Component{
   state={
-    challenges:[]
+    challenges:[],
   }
 
   componentDidMount(){
@@ -22,7 +25,10 @@ class challengeContainer extends Component{
     return(
       <div>
       <h1> Challenges Container </h1>
-      <button>New Challenge</button>
+      <Modal trigger={<Button>New Challenge</Button>}>
+        <Modal.Header><NewChallengeForm/></Modal.Header>
+      </Modal>
+
       {this.state.challenges.map(challenge=>{
       return <Challenge key={uuid()} challenge={challenge}/>
       })}
