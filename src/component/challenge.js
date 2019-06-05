@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import { Button } from 'semantic-ui-react'
 
 const Challenge=(props)=>{
-console.log('challenge props', props)
+// console.log('challenge props', props)
   return(
     <div>
     <h1>THE CHALLENGE </h1>
