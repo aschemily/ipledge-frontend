@@ -9,8 +9,9 @@ class NewChallengeForm extends Component {
     location:''
   }
 
-  inputChange =(event)=>{
-    const {title, image, information, location} = event.target
+  inputChange = (event)=>{
+  //  const {title, image, information, location} = event.target
+  //console.log('event.target.value',event.target.value)
   }
 
 render(){
@@ -19,22 +20,26 @@ render(){
       <Form>
          <Form.Field>
            <label>Image</label>
-           <input placeholder='Image' />
+             <input type="text" placeholder='Image'
+               onChange={this.inputChange} />
            </Form.Field>
 
            <Form.Field>
              <label>Title</label>
-             <input placeholder='Title' />
+             <input placeholder='Title'
+               onChange={this.inputChange}/>
            </Form.Field>
 
            <Form.Field>
              <label>Location</label>
-             <input placeholder='Location' />
+             <input placeholder='Location'
+               onChange={this.inputChange}/>
            </Form.Field>
 
          <Form.Field>
            <label>Information</label>
-           <input placeholder='Information' />
+           <input placeholder='Information'
+             onChange={this.inputChange} />
          </Form.Field>
 
          <Button type='submit'>Submit</Button>
