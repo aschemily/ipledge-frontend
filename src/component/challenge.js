@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import { Button } from 'semantic-ui-react'
 
 const Challenge=(props)=>{
 console.log('challenge props', props)
@@ -9,6 +10,8 @@ console.log('challenge props', props)
     <h2>{props.challenge.title}</h2>
     <h3>{props.challenge.location}</h3>
     <h4>{props.challenge.information}</h4>
+    <button class="ui primary button">Edit</button>
+    <button class="ui secondary button">Delete</button>
     </div>
   )
 }
