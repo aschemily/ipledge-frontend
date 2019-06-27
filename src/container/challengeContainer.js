@@ -14,9 +14,10 @@ class challengeContainer extends Component{
     fetch("http://localhost:3000/api/v1/challenges")
     .then(r => r.json())
     .then(data=>{
-      this.setState({
-        challenges: data
-      })
+      console.log('dataaa',data)
+      // this.setState({
+      //   challenges: data
+      // })
     })
   }
 
@@ -41,13 +42,13 @@ class challengeContainer extends Component{
       console.log('data', data)
     })
 
-    
+
   }
 
 
 
   render(){
-  //  console.log('challengeContainer props', this.props)
+   console.log('challengeContainer props', this.props)
     return(
       <div>
       <h1> Challenges Container </h1>
